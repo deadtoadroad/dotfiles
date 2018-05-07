@@ -1,0 +1,56 @@
+let mapleader = ' '
+set ignorecase smartcase
+set hlsearch
+set showmode
+
+" Edit settings and reload
+noremap <leader>; :edit ~\.ideavimrc
+noremap <leader>: :source ~\.ideavimrc
+
+" Easy clipboard
+noremap <leader>y "+y
+noremap <leader>Y "+Y
+noremap <leader>p "+p
+noremap <leader>P "+P
+
+" IDEA mappings
+" *************
+
+noremap <leader>w :action EditorToggleShowWhitespaces
+noremap <leader>u :action FindUsages
+
+" Navigate
+noremap <leader>n :action GotoClass
+noremap <leader>N :action GotoFile
+noremap <leader>s :action GotoSymbol
+noremap <leader>b :action Back
+noremap <leader>f :action Forward
+noremap <leader>@ :action SelectIn
+noremap <leader>d :action GotoDeclaration
+noremap <leader>i :action GotoImplementation
+noremap <leader>D :action GotoTypeDeclaration
+noremap <leader>U :action GotoSuperMethod
+noremap <leader>S :action GotoRelated
+noremap ]m :action MethodDown
+noremap [m :action MethodUp
+
+" Code
+" These next two don't work in visual mode so use IDEA defaults of c-/ and c-s-/ instead
+"noremap <leader>/ :action CommentByLineComment
+"noremap <leader>? :action CommentByBlockComment
+
+" Refactor
+noremap <leader>rc :action Refactorings.QuickListPopupAction
+noremap <leader>rm :action Move
+noremap <leader>rr :action RenameElement
+
+" Tools
+noremap <leader>csn :action com.jetbrains.rider.interactive.csi.StartCSharpInteractive
+noremap <leader>css :action com.jetbrains.rider.interactive.csi.SendToCSharpInteractive
+
+" Window
+noremap <leader>to :action CloseAllEditorsButActive
+noremap <leader>tu :action CloseAllUnmodifiedEditors
+noremap <leader>tj :action MoveTabDown
+noremap <leader>tl :action MoveTabRight
+noremap <leader>tm :action MoveEditorToOppositeTabGroup
